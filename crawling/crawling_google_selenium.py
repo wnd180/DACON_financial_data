@@ -63,4 +63,8 @@ for i in df_googlelink:
     #     print(j.select_one('.LC20lb.DKV0Md').text)  # 제목
     #     print(j.a.attrs['href'])       # 링크
     #     print()
+    print(v.a.attrs['href'])
     detail_urls.append(v.a.attrs['href'])
+
+df['detaillink'] = detail_urls
+df.to_csv('/Users/kwonseongjung/Downloads', index=None)
